@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harmonize Your Soul | Premium Five Elements Gemstone Beads</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .serif { font-family: 'Playfair Display', serif; }
+        .glass-nav { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); }
+        .element-card:hover { transform: translateY(-5px); transition: all 0.3s ease; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="text-2xl font-bold tracking-tighter serif text-amber-800">ZEN ELEMENTS</div>
+                <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest">
+                    <a href="#concept" class="hover:text-amber-600">The Concept</a>
+                    <a href="#collection" class="hover:text-amber-600">Collection</a>
+                    <a href="#reviews" class="hover:text-amber-600">Reviews</a>
+                </div>
+                <button onclick="scrollToCollection()" class="bg-amber-800 text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-amber-900 transition">SHOP NOW</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center">
+            <div class="lg:w-1/2 text-center lg:text-left z-10">
+                <span class="inline-block px-4 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-bold uppercase tracking-widest mb-6">Eastern Wisdom Meets Modern Luxury</span>
+                <h1 class="text-5xl lg:text-7xl serif leading-tight mb-6">Balance Your Energy, <br><span class="text-amber-700 italic">Invite Prosperity.</span></h1>
+                <p class="text-lg text-gray-600 mb-10 max-w-xl mx-auto lg:mx-0">Handcrafted with 100% natural gemstones, our Five Elements collection is designed to align your inner Qi and manifest your deepest intentions.</p>
+                <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+                    <button onclick="scrollToCollection()" class="px-8 py-4 bg-gray-900 text-white rounded-lg font-bold text-lg hover:bg-black transition-all transform hover:scale-105">Claim Your Fortune</button>
+                    <a href="#concept" class="px-8 py-4 border border-gray-300 rounded-lg font-bold text-lg hover:bg-white transition-all">Learn The Science</a>
+                </div>
+            </div>
+            <div class="lg:w-1/2 mt-12 lg:mt-0 relative">
+                <div class="absolute -z-10 w-72 h-72 bg-amber-200 rounded-full blur-3xl opacity-50 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+                <img src="https://images.unsplash.com/photo-1615484477778-ca3b77940c25?auto=format&fit=crop&q=80&w=800" alt="Premium Five Elements Beads" class="rounded-2xl shadow-2xl mx-auto w-full max-w-md object-cover h-[500px]">
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Value (5 Elements Concept) -->
+    <section id="concept" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl serif mb-4 text-gray-800">The Power of Wu Xing</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto">Ancient Eastern philosophy suggests the universe is composed of five energies. When these are in balance, luck, health, and wealth flow effortlessly.</p>
+            </div>
+            <div class="grid grid-cols-2 lg:grid-cols-5 gap-8">
+                <!-- Metal -->
+                <div class="text-center element-card">
+                    <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-amber-200">
+                        <span class="text-2xl">⚪</span>
+                    </div>
+                    <h3 class="font-bold mb-2">Metal (Jin)</h3>
+                    <p class="text-xs text-gray-500">Precision, clarity, and wealth preservation.</p>
+                </div>
+                <!-- Wood -->
+                <div class="text-center element-card">
+                    <div class="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-green-200">
+                        <span class="text-2xl">🌱</span>
+                    </div>
+                    <h3 class="font-bold mb-2">Wood (Mu)</h3>
+                    <p class="text-xs text-gray-500">Growth, vitality, and creative expansion.</p>
+                </div>
+                <!-- Water -->
+                <div class="text-center element-card">
+                    <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-blue-200">
+                        <span class="text-2xl">💧</span>
+                    </div>
+                    <h3 class="font-bold mb-2">Water (Shui)</h3>
+                    <p class="text-xs text-gray-500">Wisdom, intuition, and effortless flow.</p>
+                </div>
+                <!-- Fire -->
+                <div class="text-center element-card">
+                    <div class="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-red-200">
+                        <span class="text-2xl">🔥</span>
+                    </div>
+                    <h3 class="font-bold mb-2">Fire (Huo)</h3>
+                    <p class="text-xs text-gray-500">Passion, fame, and magnetic energy.</p>
+                </div>
+                <!-- Earth -->
+                <div class="text-center element-card">
+                    <div class="w-16 h-16 bg-amber-50 rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-amber-300">
+                        <span class="text-2xl">⛰️</span>
+                    </div>
+                    <h3 class="font-bold mb-2">Earth (Tu)</h3>
+                    <p class="text-xs text-gray-500">Stability, grounding, and abundance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Collection -->
+    <section id="collection" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-3xl lg:text-4xl serif text-gray-800">The Signature Collection</h2>
+                    <p class="text-gray-500">Selected based on 2024 Energy Manifestation trends.</p>
+                </div>
+                <div class="hidden lg:block">
+                    <span class="text-sm font-semibold text-amber-800">FREE GLOBAL SHIPPING ON ORDERS OVER $150</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Product 1: Metal -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group">
+                    <div class="h-80 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1599643478518-a744c517b223?auto=format&fit=crop&q=80&w=600" alt="White Quartz Metal Element" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-4 left-4 bg-white px-3 py-1 rounded-full text-xs font-bold shadow-sm">METAL</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">The Clarity Bracelet</h3>
+                        <p class="text-sm text-gray-500 mb-4 italic">Clear Quartz & Moonstone for mental precision.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-gray-900">$128.00</span>
+                            <button onclick="handlePurchase('The Clarity Bracelet')" class="bg-gray-900 text-white px-5 py-2 rounded-lg text-sm font-bold hover:bg-amber-800 transition">BUY NOW</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2: Wood -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group">
+                    <div class="h-80 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b?auto=format&fit=crop&q=80&w=600" alt="Green Jade Wood Element" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-4 left-4 bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-bold shadow-sm">WOOD</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">The Growth Talisman</h3>
+                        <p class="text-sm text-gray-500 mb-4 italic">Aventurine & Green Jade for vitality.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-gray-900">$145.00</span>
+                            <button onclick="handlePurchase('The Growth Talisman')" class="bg-gray-900 text-white px-5 py-2 rounded-lg text-sm font-bold hover:bg-amber-800 transition">BUY NOW</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3: Water -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group">
+                    <div class="h-80 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1596944229581-069792440960?auto=format&fit=crop&q=80&w=600" alt="Lapis Lazuli Water Element" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-4 left-4 bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-bold shadow-sm">WATER</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">The Infinite Flow</h3>
+                        <p class="text-sm text-gray-500 mb-4 italic">Lapis Lazuli & Obsidian for inner wisdom.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-gray-900">$188.00</span>
+                            <button onclick="handlePurchase('The Infinite Flow')" class="bg-gray-900 text-white px-5 py-2 rounded-lg text-sm font-bold hover:bg-amber-800 transition">BUY NOW</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4: Fire -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group">
+                    <div class="h-80 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1626270110332-959c90530932?auto=format&fit=crop&q=80&w=600" alt="Garnet Fire Element" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-4 left-4 bg-red-100 text-red-800 px-3 py-1 rounded-full text-xs font-bold shadow-sm">FIRE</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">The Radiant Spirit</h3>
+                        <p class="text-sm text-gray-500 mb-4 italic">Carnelian & Red Agate for magnetism.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-gray-900">$210.00</span>
+                            <button onclick="handlePurchase('The Radiant Spirit')" class="bg-gray-900 text-white px-5 py-2 rounded-lg text-sm font-bold hover:bg-amber-800 transition">BUY NOW</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5: Earth -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group">
+                    <div class="h-80 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&q=80&w=600" alt="Citrine Earth Element" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-4 left-4 bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-xs font-bold shadow-sm">EARTH</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">The Grounding Earth</h3>
+                        <p class="text-sm text-gray-500 mb-4 italic">Citrine & Tiger's Eye for abundance.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-gray-900">$165.00</span>
+                            <button onclick="handlePurchase('The Grounding Earth')" class="bg-gray-900 text-white px-5 py-2 rounded-lg text-sm font-bold hover:bg-amber-800 transition">BUY NOW</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6: The Harmonizer (Multi-Element) -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group border-2 border-amber-400">
+                    <div class="h-80 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&q=80&w=600" alt="All Five Elements" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-4 left-4 bg-gray-900 text-white px-3 py-1 rounded-full text-xs font-bold shadow-sm">BEST SELLER</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">The Great Harmonizer</h3>
+                        <p class="text-sm text-gray-500 mb-4 italic">Full Wu Xing balance in one strand.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-gray-900">$220.00</span>
+                            <button onclick="handlePurchase('The Great Harmonizer')" class="bg-amber-800 text-white px-5 py-2 rounded-lg text-sm font-bold hover:bg-amber-900 transition">BUY NOW</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Quality -->
+    <section class="py-20 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl serif mb-12">Why Choose Zen Elements?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div>
+                    <div class="text-4xl mb-4">💎</div>
+                    <h3 class="text-xl font-bold mb-2">100% Natural Stones</h3>
+                    <p class="text-gray-400 text-sm">GIA certified ethically sourced gemstones from around the globe.</p>
+                </div>
+                <div>
+                    <div class="text-4xl mb-4">🙌</div>
+                    <h3 class="text-xl font-bold mb-2">Hand-Strung in Zen</h3>
+                    <p class="text-gray-400 text-sm">Every piece is cleansed with sage and positive intention before shipping.</p>
+                </div>
+                <div>
+                    <div class="text-4xl mb-4">✨</div>
+                    <h3 class="text-xl font-bold mb-2">Energy Alignment</h3>
+                    <p class="text-gray-400 text-sm">Consultation services available for personalized elemental mapping.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="reviews" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl serif text-center mb-16 italic">"A Shift in my Aura..."</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="p-8 bg-gray-50 rounded-xl">
+                    <div class="flex text-amber-400 mb-4">★★★★★</div>
+                    <p class="text-gray-600 italic mb-6">"Since wearing the Water element bracelet, my anxiety has subsided. It's not just jewelry; it's a tool for peace."</p>
+                    <div class="font-bold">— Sarah J., London</div>
+                </div>
+                <div class="p-8 bg-gray-50 rounded-xl">
+                    <div class="flex text-amber-400 mb-4">★★★★★</div>
+                    <p class="text-gray-600 italic mb-6">"Beautifully crafted. I was worried about the quality for the price, but these are genuine, heavy-duty stones."</p>
+                    <div class="font-bold">— Michael T., Sydney</div>
+                </div>
+                <div class="p-8 bg-gray-50 rounded-xl">
+                    <div class="flex text-amber-400 mb-4">★★★★★</div>
+                    <p class="text-gray-600 italic mb-6">"The packaging alone felt like a spiritual experience. Shipping was fast to New York. Highly recommend."</p>
+                    <div class="font-bold">— Emma L., NYC</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24 bg-gray-50">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl serif text-center mb-12">Frequently Asked Questions</h2>
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="font-bold mb-2">How do I choose my element?</h3>
+                    <p class="text-gray-600 text-sm">We recommend choosing based on what you feel you lack. If you need stability, choose Earth. If you need creativity, choose Wood. You can also contact us for a free chart analysis.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="font-bold mb-2">Worldwide Shipping & Returns?</h3>
+                    <p class="text-gray-600 text-sm">We ship globally. Standard shipping takes 7-12 days. We offer a 30-day "Energy Guarantee"—if you don't feel the shift, return it for a full refund.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="font-bold mb-2">Can I wear multiple elements?</h3>
+                    <p class="text-gray-600 text-sm">Yes! Wearing multiple elements can help create a complete cycle of generation (Birth Cycle) for maximum prosperity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 py-12 border-t">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="text-2xl font-bold serif text-amber-800 mb-4">ZEN ELEMENTS</div>
+            <p class="text-gray-500 text-sm mb-8">Elevating modern living through ancient wisdom.</p>
+            <div class="flex justify-center space-x-6 text-gray-400 mb-8 text-xs uppercase tracking-widest">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <p class="text-gray-400 text-xs">© 2024 Zen Elements Jewelry. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Success Modal (Simplified) -->
+    <div id="successModal" class="fixed inset-0 bg-black/50 hidden items-center justify-center z-[100] p-4">
+        <div class="bg-white p-8 rounded-2xl max-w-sm w-full text-center">
+            <div class="text-5xl mb-4">🛒</div>
+            <h3 class="text-xl font-bold mb-2">Excellent Choice!</h3>
+            <p id="modalProductName" class="text-gray-600 mb-6"></p>
+            <button onclick="closeModal()" class="w-full bg-gray-900 text-white py-3 rounded-xl font-bold">Continue Shopping</button>
+        </div>
+    </div>
+
+    <script>
+        function scrollToCollection() {
+            document.getElementById('collection').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function handlePurchase(productName) {
+            // Track conversion event here
+            console.log(`Conversion: User clicked buy on ${productName}`);
+            
+            document.getElementById('modalProductName').innerText = `You've selected "${productName}". Redirecting to secure checkout...`;
+            document.getElementById('successModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('successModal').style.display = 'none';
+        }
+
+        // Close modal on click outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('successModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>
