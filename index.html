@@ -1,6 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17950745639"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-17950745639');
+</script>
+<!-- Event snippet for 购买 conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-17950745639/CDaYCPnA-vcbEKfIyu9C',
+      'value': 1.0,
+      'currency': 'USD',
+      'transaction_id': '',
+      'event_callback': callback
+      // 'new_customer': true /* calculate dynamically, populate with true/false */,
+  });
+  return false;
+}
+</script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harmo1222222rtretwertwertsadfdds | Premium Five Elements Gemstone Beads</title>
@@ -44,7 +74,7 @@
             </div>
             <div class="lg:w-1/2 mt-12 lg:mt-0 relative">
                 <div class="absolute -z-10 w-72 h-72 bg-amber-200 rounded-full blur-3xl opacity-50 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
-                <img src="https://images.unsplash.com/photo-1615484477778-ca3b77940c25?auto=format&fit=crop&q=80&w=800" alt="Premium Five Elements Beads" class="rounded-2xl shadow-2xl mx-auto w-full max-w-md object-cover h-[500px]">
+                <img src="" alt="Premium Five Elements Beads" class="rounded-2xl shadow-2xl mx-auto w-full max-w-md object-cover h-[500px]">
             </div>
         </div>
     </section>
@@ -61,7 +91,7 @@
                 <div class="text-center element-card">
                     <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-amber-200">
                         <span class="text-2xl">⚪</span>
-                    </div>
+                    </div>images
                     <h3 class="font-bold mb-2">Metal (Jin)</h3>
                     <p class="text-xs text-gray-500">Precision, clarity, and wealth preservation.</p>
                 </div>
@@ -313,12 +343,32 @@
         }
 
         function handlePurchase(productName) {
-            // Track conversion event here
-            console.log(`Conversion: User clicked buy on ${productName}`);
-            
-            document.getElementById('modalProductName').innerText = `You've selected "${productName}". Redirecting to secure checkout...`;
-            document.getElementById('successModal').style.display = 'flex';
-        }
+    // 1. 定义点击后的回调函数：当谷歌成功收到数据后，执行弹窗逻辑
+    var callback = function () {
+        console.log(`Conversion: User clicked buy on ${productName}`);
+        
+        // 执行你原有的业务逻辑：更新模态框文字并显示
+        document.getElementById('modalProductName').innerText = `You've selected "${productName}". Redirecting to secure checkout...`;
+        document.getElementById('successModal').style.display = 'flex';
+        
+        // 如果你需要在这里直接跳转，可以加上：
+        // window.location = "你的支付链接";
+    };
+
+    // 2. 发送 Google Ads 转化数据
+    // 检查 gtag 是否加载，防止报错导致后续逻辑卡死
+    if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {
+            'send_to': 'AW-17950745639/CDaYCPnA-vcbEKfIyu9C',
+            'value': 88.0,      // 建议根据五行珠串单价修改此数值
+            'currency': 'USD',
+            'event_callback': callback // 关键点：数据发完后调用上面的回调
+        });
+    } else {
+        // 如果 gtag 没加载成功，直接执行逻辑，保证用户体验
+        callback();
+    }
+}
 
         function closeModal() {
             document.getElementById('successModal').style.display = 'none';
