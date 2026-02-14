@@ -1,0 +1,305 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balance Your Qi | Five Elements Manifestation Bracelet</title>
+    
+    <!-- Google Tag Manager / FB Pixel Placeholder -->
+    <!-- [GTM/Pixel Code Start] -->
+    <!-- Paste your tracking script here -->
+    <!-- [GTM/Pixel Code End] -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --zen-dark: #1a1a1a;
+            --zen-gold: #c5a059;
+            --zen-sand: #f9f7f2;
+        }
+        body { font-family: 'Inter', sans-serif; background-color: var(--zen-sand); color: var(--zen-dark); }
+        .serif { font-family: 'Playfair Display', serif; }
+        .bg-zen-dark { background-color: var(--zen-dark); }
+        .text-zen-gold { color: var(--zen-gold); }
+        .border-zen-gold { border-color: var(--zen-gold); }
+        
+        @keyframes fade-in-up {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-up { animation: fade-in-up 0.8s ease-out forwards; }
+        .sticky-cta { position: fixed; bottom: 0; left: 0; right: 0; z-index: 50; display: none; }
+        @media (max-width: 768px) { .sticky-cta { display: block; } }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-zen-dark text-white text-[10px] py-2 text-center uppercase tracking-[0.2em]">
+        Free Worldwide Shipping & 30-Day Money Back Guarantee
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[95vh] flex items-center px-6 lg:px-20 overflow-hidden py-12">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center w-full">
+            <div class="z-10 animate-up">
+                <!-- A/B Test Option B: Outcome Focused -->
+                <h1 class="text-5xl lg:text-7xl serif leading-tight mb-6">Manifest Prosperity <br><span class="text-zen-gold italic">Through Ancient Qi.</span></h1>
+                
+                <p class="text-lg text-gray-500 mb-8 max-w-lg">Hand-crafted with 100% natural semi-precious stones. Purified using ancient temple techniques to align your five elemental energies.</p>
+                
+                <!-- Urgency & CTA -->
+                <div class="flex flex-col gap-4">
+                    <button onclick="openModal('Hero Button')" class="bg-zen-dark text-white py-4 px-10 rounded-full font-semibold hover:bg-black transition-all transform hover:scale-105 shadow-xl">
+                        GET 20% OFF NOW — $89 ONLY
+                    </button>
+                    <div class="flex items-center gap-3 text-sm text-gray-400">
+                        <span class="flex text-zen-gold">★★★★★</span>
+                        <span>Join 4,500+ souls in balance</span>
+                    </div>
+                </div>
+
+                <!-- Limited Time Countdown -->
+                <div class="mt-8 p-4 border border-dashed border-gray-300 rounded-lg inline-block">
+                    <p class="text-xs uppercase tracking-widest text-gray-400 mb-2">Offer expires in:</p>
+                    <div id="countdown" class="text-2xl font-mono text-zen-dark font-bold">14:59:59</div>
+                </div>
+            </div>
+
+            <!-- Visual Composition: Main + Detail Shots -->
+            <div class="relative grid grid-cols-12 gap-4 items-center">
+                <!-- Background Decoration -->
+                <div class="absolute -z-10 w-full h-full bg-white rounded-full blur-3xl opacity-40 top-0 left-0"></div>
+                
+                <!-- Main Product Image (Lifestyle/Full View) -->
+                <div class="col-span-8 animate-up" style="animation-delay: 0.2s;">
+                    <div class="overflow-hidden rounded-2xl shadow-2xl border-4 border-white">
+                        <!-- [Image: 五行珠串佩戴场景主图] -->
+                        <img src="https://images.unsplash.com/photo-1615484477778-ca3b77940c25?auto=format&fit=crop&q=80&w=800" 
+                             alt="Manifestation Bracelet Main View" 
+                             class="w-full h-[500px] object-cover hover:scale-110 transition duration-700">
+                    </div>
+                </div>
+
+                <!-- Secondary Detail Shots Stacked -->
+                <div class="col-span-4 flex flex-col gap-4">
+                    <!-- Detail Shot 1: Stone Macro -->
+                    <div class="animate-up overflow-hidden rounded-xl shadow-lg border-2 border-white" style="animation-delay: 0.4s;">
+                        <!-- [Image: 天然原石细节近摄图] -->
+                        <img src="https://images.unsplash.com/photo-1596944229530-914757597ea7?auto=format&fit=crop&q=80&w=400" 
+                             alt="Natural Stone Detail" 
+                             class="w-full h-[242px] object-cover hover:scale-110 transition duration-700">
+                    </div>
+                    <!-- Detail Shot 2: Purification Ritual -->
+                    <div class="animate-up overflow-hidden rounded-xl shadow-lg border-2 border-white" style="animation-delay: 0.6s;">
+                        <!-- [Image: 古法消磁/颂钵细节图] -->
+                        <img src="https://images.unsplash.com/photo-1536627217140-770335805f01?auto=format&fit=crop&q=80&w=400" 
+                             alt="Purification Ritual" 
+                             class="w-full h-[242px] object-cover hover:scale-110 transition duration-700">
+                    </div>
+                </div>
+
+                <!-- Floating USP Badge -->
+                <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl border border-zen-gold animate-up flex items-center gap-3" style="animation-delay: 0.8s;">
+                    <div class="w-10 h-10 bg-zen-sand rounded-full flex items-center justify-center text-zen-gold font-bold">100%</div>
+                    <div class="text-[10px] font-bold uppercase tracking-tighter">Genuine<br>Earth Elements</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem & Solution Section -->
+    <section class="py-24 bg-white px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl lg:text-5xl serif mb-10">Why Do You Feel Stuck?</h2>
+            <p class="text-xl text-gray-600 leading-relaxed mb-12">
+                In a fast-paced world, our internal <span class="text-zen-dark font-bold">Qi (energy)</span> often becomes fragmented. When your Five Elemental energies—Metal, Wood, Water, Fire, and Earth—are out of sync, opportunities pass you by, and stress takes hold.
+            </p>
+            <div class="grid md:grid-cols-2 gap-10 items-center">
+                <div class="bg-zen-sand p-8 rounded-2xl">
+                    <h3 class="serif text-2xl mb-4">The Solution: Wu Xing</h3>
+                    <p class="text-sm text-gray-500">Our beads act as energy conductors. Each stone is selected for its vibrational frequency, creating a "Circle of Creation" that constantly regenerates your personal energy field.</p>
+                </div>
+                <div class="text-left space-y-4">
+                    <div class="flex items-start gap-3">
+                        <div class="mt-1 text-zen-gold text-xl">✓</div>
+                        <p><strong>100% Genuine Stones:</strong> No synthetics, no glass.</p>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="mt-1 text-zen-gold text-xl">✓</div>
+                        <p><strong>Ancient Purification:</strong> Every strand undergoes a 48-hour singing bowl cleanse.</p>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="mt-1 text-zen-gold text-xl">✓</div>
+                        <p><strong>Custom Sizing:</strong> Tailored to fit your unique aura.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Details / 5 Elements -->
+    <section class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl lg:text-5xl serif mb-4">The Five Pillars of Fate</h2>
+            <p class="text-gray-500 italic">Align your destiny with the universe.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
+            <div class="bg-white p-6 rounded-xl border border-gray-100 hover:border-zen-gold transition-colors text-center group">
+                <div class="text-3xl mb-4 grayscale group-hover:grayscale-0 transition">⚪</div>
+                <h4 class="font-bold mb-2">METAL</h4>
+                <p class="text-xs text-gray-400">Clarity & Abundance. Clear Quartz for precision.</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl border border-gray-100 hover:border-zen-gold transition-colors text-center group">
+                <div class="text-3xl mb-4 grayscale group-hover:grayscale-0 transition">🌱</div>
+                <h4 class="font-bold mb-2">WOOD</h4>
+                <p class="text-xs text-gray-400">Growth & Vitality. Green Jade for expansion.</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl border border-gray-100 hover:border-zen-gold transition-colors text-center group">
+                <div class="text-3xl mb-4 grayscale group-hover:grayscale-0 transition">💧</div>
+                <h4 class="font-bold mb-2">WATER</h4>
+                <p class="text-xs text-gray-400">Wisdom & Flow. Obsidian for protection.</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl border border-gray-100 hover:border-zen-gold transition-colors text-center group">
+                <div class="text-3xl mb-4 grayscale group-hover:grayscale-0 transition">🔥</div>
+                <h4 class="font-bold mb-2">FIRE</h4>
+                <p class="text-xs text-gray-400">Passion & Fame. Red Agate for courage.</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl border border-gray-100 hover:border-zen-gold transition-colors text-center group">
+                <div class="text-3xl mb-4 grayscale group-hover:grayscale-0 transition">⛰️</div>
+                <h4 class="font-bold mb-2">EARTH</h4>
+                <p class="text-xs text-gray-400">Trust & Stability. Citrine for manifestation.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof / Testimonials -->
+    <section class="py-24 bg-zen-dark text-white px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl serif text-center mb-16 text-zen-gold italic">Real Shifts, Real Stories</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white/5 p-8 rounded-2xl border border-white/10">
+                    <p class="italic text-gray-300 mb-6">"I've worn many 'healing' bracelets, but the weight and energy of this one are different. Within a week, my business took a surprising turn for the better."</p>
+                    <p class="font-bold text-sm">— LINDA W., SAN FRANCISCO</p>
+                </div>
+                <div class="bg-white/5 p-8 rounded-2xl border border-white/10">
+                    <p class="italic text-gray-300 mb-6">"The Apple of spiritual jewelry. The packaging is premium, and you can tell the stones are 100% natural. I feel much more grounded."</p>
+                    <p class="font-bold text-sm">— MARCUS K., LONDON</p>
+                </div>
+                <div class="bg-white/5 p-8 rounded-2xl border border-white/10">
+                    <p class="italic text-gray-300 mb-6">"Fast shipping to Sydney. The purification ritual included in the box was a beautiful touch. Highly recommend for gift or self."</p>
+                    <p class="font-bold text-sm">— CHLOE S., SYDNEY</p>
+                </div>
+            </div>
+            <div class="mt-20 flex flex-wrap justify-center gap-8 opacity-50 grayscale invert">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa" class="h-6">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" class="h-6">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" class="h-6">
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Signals / FAQ -->
+    <section class="py-24 px-6 bg-white">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl serif text-center mb-12">Peace of Mind</h2>
+            <div class="space-y-6">
+                <div class="border-b pb-4">
+                    <h4 class="font-bold mb-2">Is it real gemstone?</h4>
+                    <p class="text-sm text-gray-500">Yes. We use 100% A-grade natural stones. No lab-created or glass fakes. We provide a certificate of authenticity with every order.</p>
+                </div>
+                <div class="border-b pb-4">
+                    <h4 class="font-bold mb-2">What is the "Purification"?</h4>
+                    <p class="text-sm text-gray-500">Crystals absorb energy. Before shipping, each bracelet is placed in a quartz singing bowl to reset its frequency back to pure state.</p>
+                </div>
+                <div class="border-b pb-4">
+                    <h4 class="font-bold mb-2">30-Day Money Back Guarantee</h4>
+                    <p class="text-sm text-gray-500">If you don't feel a shift in your energy or aren't satisfied with the quality, return it within 30 days for a no-questions-asked refund.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Area -->
+    <section class="py-24 bg-zen-sand text-center px-6">
+        <h2 class="text-4xl serif mb-6 italic">Ready to Harmonize?</h2>
+        <p class="text-gray-500 mb-8">Stock is limited due to the purification process timing.</p>
+        <button onclick="openModal('Bottom Button')" class="bg-zen-dark text-white py-5 px-12 rounded-full font-bold text-xl hover:shadow-2xl transition-all">
+            CLAIM MINE FOR $89
+        </button>
+    </section>
+
+    <!-- Sticky Mobile CTA -->
+    <div class="sticky-cta p-4 bg-white/80 backdrop-blur-md border-t border-gray-100">
+        <button onclick="openModal('Sticky CTA')" class="w-full bg-zen-dark text-white py-4 rounded-full font-bold shadow-xl">
+            GET 20% OFF NOW
+        </button>
+    </div>
+
+    <!-- Conversion Modal (Pop-up) -->
+    <div id="purchaseModal" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-[100] p-4 backdrop-blur-sm">
+        <div class="bg-white p-8 rounded-2xl max-w-md w-full relative animate-up">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-black">✕</button>
+            <div class="text-center">
+                <h3 class="text-2xl serif mb-2">Limited Stock Reserved</h3>
+                <p class="text-sm text-gray-500 mb-6">Enter your email to unlock your exclusive 20% discount and proceed to checkout.</p>
+                
+                <input type="email" id="userEmail" placeholder="Enter your email" class="w-full border p-4 rounded-xl mb-4 focus:ring-2 focus:ring-zen-gold outline-none">
+                
+                <button onclick="submitTest()" class="w-full bg-zen-dark text-white py-4 rounded-xl font-bold hover:bg-black transition">
+                    UNLOCK MY DISCOUNT
+                </button>
+                
+                <p class="text-[10px] text-gray-400 mt-4 uppercase">🔒 Secure 256-bit SSL encrypted checkout</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Message -->
+    <div id="successMsg" class="fixed top-10 left-1/2 -translate-x-1/2 bg-green-500 text-white px-8 py-4 rounded-full shadow-2xl z-[110] hidden">
+        High intent detected! Data logged for conversion test.
+    </div>
+
+    <script>
+        // Countdown Timer Logic
+        let time = 15 * 60; // 15 minutes
+        const timerElement = document.getElementById('countdown');
+        
+        setInterval(() => {
+            let minutes = Math.floor(time / 60);
+            let seconds = time % 60;
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+            timerElement.innerText = `${minutes}:${seconds}`;
+            if (time > 0) time--;
+        }, 1000);
+
+        // Modal Logic
+        function openModal(source) {
+            console.log(`Tracking Event: CTA_Click_Source: ${source}`);
+            document.getElementById('purchaseModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('purchaseModal').style.display = 'none';
+        }
+
+        // Conversion Simulation
+        function submitTest() {
+            const email = document.getElementById('userEmail').value;
+            if (email.includes('@')) {
+                console.log(`Conversion Success: User ${email} clicked to purchase.`);
+                document.getElementById('successMsg').style.display = 'block';
+                setTimeout(() => {
+                    document.getElementById('successMsg').style.display = 'none';
+                    closeModal();
+                }, 3000);
+            } else {
+                alert("Please enter a valid email to receive your discount.");
+            }
+        }
+    </script>
+</body>
+</html>
