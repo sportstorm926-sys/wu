@@ -1,6 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17950745639"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-17950745639');
+    </script>
+    
+    <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-17950745639/CDaYCPnA-vcbEKfIyu9C',
+          'value': 90.0, // 建议填入实际订单金额
+          'currency': 'USD',
+          'event_callback': callback
+      });
+      return false;
+    }
+    </script>
+    </head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Grounding Earth | Wealth & Success Bracelet</title>
@@ -94,6 +120,19 @@
         Join 5,000+ seekers. No spam, only insights. Email: <a href="mailto:sportstorm926@gmail.com" style="color:white; font-weight:bold; text-decoration:underline;">sportstorm926@gmail.com</a></p>
         <p>© 2024 Zen Elements Jewelry. All Rights Reserved.</p>
     </footer>
+    <script>
+    function trackAndShowPopup() {
+        // 1. 发送谷歌 ADS 转化信号
+        gtag('event', 'conversion', {
+            'send_to': 'AW-17950745639/CDaYCPnA-vcbEKfIyu9C',
+            'value': 90.0,
+            'currency': 'USD'
+        });
+        
+        // 2. 触发弹出层
+        document.getElementById('popup').style.display='block';
+    }
+    </script>
 
     <div id="popup">
         <h3>The website is still under construction...</h3>
