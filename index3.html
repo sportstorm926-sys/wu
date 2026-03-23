@@ -52,6 +52,42 @@
         summary { display: flex; justify-content: space-between; font-weight: bold; }
         .details-content { font-size: 14px; color: #666; padding-top: 10px; }
         .footer-zone { background: var(--footer-brown); color: white; padding: 50px 20px; text-align: center; }
+    /* 真人验证弹窗样式 */
+        #human-verify-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 320px;
+            background: white;
+            border-radius: 12px;
+            z-index: 2000;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border: 1px solid #eee;
+        }
+        .verify-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 1999;
+        }
+        .verify-checkbox-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 8px;
+        }
     </style>
 </head>
 <body>
@@ -78,7 +114,7 @@
                 <p><b>Please hurry! Only 10 left in stock</b></p>
                 <div class="stock-progress"><div class="progress-bar"></div></div>
 
-                <button onclick="document.getElementById('popup').style.display='block'" class="buy-now-btn" style="width:100%; background:var(--accent-orange); color:white; border:none; padding:20px; font-weight:bold; cursor:pointer;">BUY NOW</button>
+                <button onclick="openVerify()" class="buy-now-btn" style="width:100%; background:var(--accent-orange); color:white; border:none; padding:20px; font-weight:bold; cursor:pointer;">BUY NOW</button>
 
                 <div class="icon-bar">
                     <div>💎<br>TOP SPIRITUAL BRAND</div>
@@ -122,5 +158,57 @@
         <a href="mailto:sportstorm926@gmail.com" style="display:block; padding:15px; background:var(--accent-orange); color:white; text-decoration:none; font-weight:bold; margin-top:20px;">Send an email to book now</a>
         <button onclick="document.getElementById('popup').style.display='none'" style="margin-top:20px; border:none; background:none; cursor:pointer;">Close</button>
     </div>
+<div id="verify-overlay" class="verify-overlay"></div>
+    <div id="human-verify-popup">
+        <h3 style="margin-top:0;">Security Check</h3>
+        <p style="font-size:14px; color:#666;">Please verify that you are a real visitor to continue.</p>
+        <div class="verify-checkbox-wrapper">
+            <input type="checkbox" id="is-human-checkbox" style="width:20px; height:20px; cursor:pointer;">
+            <label for="is-human-checkbox" style="cursor:pointer; font-weight:600;">I am a human</label>
+        </div>
+        <button id="confirm-verify-btn" style="width:100%; background:var(--accent-orange); color:white; border:none; padding:12px; font-weight:bold; cursor:pointer; border-radius:5px; opacity:0.5;" disabled>CONFIRM</button>
+        <button onclick="closeVerify()" style="margin-top:15px; border:none; background:none; color:#999; cursor:pointer; font-size:12px;">Cancel</button>
+    </div>
+<script>
+    const verifyPopup = document.getElementById('human-verify-popup');
+    const verifyOverlay = document.getElementById('verify-overlay');
+    const checkbox = document.getElementById('is-human-checkbox');
+    const confirmBtn = document.getElementById('confirm-verify-btn');
+
+    // 打开验证弹窗
+    function openVerify() {
+        verifyPopup.style.display = 'block';
+        verifyOverlay.style.display = 'block';
+    }
+
+    // 关闭验证弹窗
+    function closeVerify() {
+        verifyPopup.style.display = 'none';
+        verifyOverlay.style.display = 'none';
+        checkbox.checked = false;
+        confirmBtn.disabled = true;
+        confirmBtn.style.opacity = "0.5";
+    }
+
+    // 监听勾选状态
+    checkbox.addEventListener('change', function() {
+        if(this.checked) {
+            confirmBtn.disabled = false;
+            confirmBtn.style.opacity = "1";
+        } else {
+            confirmBtn.disabled = true;
+            confirmBtn.style.opacity = "0.5";
+        }
+    });
+
+    // 点击确认后，关闭验证并打开原来的订阅弹窗
+    confirmBtn.addEventListener('click', function() {
+        if(checkbox.checked) {
+            closeVerify();
+            // 这里执行你原本 BUY NOW 的动作（打开 popup）
+            document.getElementById('popup').style.display = 'block';
+        }
+    });
+</script>
 </body>
 </html>
